@@ -1,0 +1,50 @@
+version: '3'
+services:
+  workspace:
+    build: ./workspace
+    ports: 
+      - "2222:22"
+    env_file: 
+      - .env
+    volumes:
+      - ./src:/var/www/mystery_logger
+    tty: true
+
+  apache:
+    image: httpd:2.4-alpine
+    ports: 
+      - "8080:80"
+      # - "1443:443" SSL
+    working_dir: /var/www/mystery_logger
+    env_file:
+      - .env
+    volumes:
+      - ./apache/httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - ./src:/var/www/mystery_logger
+      - ./log/apache:/var/log
+          
+  php-fpm:
+    build: ./php-fpm
+    working_dir: /var/www/mystery_logger
+    env_file: 
+      - .env
+    volumes:
+      - ./php-fpm/php.ini:/usr/local/etc/php/php.ini
+      - ./php-fpm/php-fpm.conf:/usr/local/etc/php-fpm.conf
+      - ./php-fpm/www.conf:/usr/local/etc/php-fpm.d/www.conf
+      - ./src:/var/www/mystery_logger
+      - ./log/php-fpm:/var/log
+
+  pgsql:
+    image: postgres:12.3-alpine
+    ports:
+      - "15432:5432"
+    env_file: 
+      - .env
+    volumes:
+      - ./src:/var/www/mystery_logger
+      - ./pgsql/data/:/var/lib/pgsql/data/
+
+
+
+

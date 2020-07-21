@@ -1,0 +1,27 @@
+# ロードマップ書いたテキストファイル
+#roadmap.txt
+
+# sql文書いたテキストファイル
+#sql.txt
+
+# imagesフォルダ
+#/web/user_images/
+#/web/performance_images/
+
+# sass関係
+#/.sass-cache
+#/web/css/style.css.map
+#/web/css/home.css.map
+#/web/css/performances.css.map
+#/web/css/users.css.map
+#/web/css/posts.css.map
+
+/apache
+/log
+/pgsql
+/php-fpm/php.ini
+/php-fpm/php-fpm.conf
+/php-fpm/www.conf
+/src
+.env
+*.md
