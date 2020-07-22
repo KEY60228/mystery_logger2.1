@@ -43,7 +43,7 @@ services:
       - .env
     volumes:
       - ./src:/var/www/mystery_logger
-      - ./pgsql/data/:/var/lib/pgsql/data/
+      - ./pgsql/data/:/var/lib/postgresql/data/
 
 
 
