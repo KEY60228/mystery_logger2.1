@@ -82,9 +82,9 @@ class MysteryLogger2Application extends Application {
    */
   protected function configure() {
     $this->db_manager->connect('master', array(
-      'dsn' => 'pgsql:dbname=mystery_logger2',
-      'user' => 'vagrant',
-      'password' => 'vagrant',
+      'dsn' => 'pgsql:host=pgsql; dbname=mystery_logger',
+      'user' => 'postgresql',
+      'password' => 'postgresql',
     ));
   }
 }
