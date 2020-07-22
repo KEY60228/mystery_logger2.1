@@ -61,7 +61,7 @@ class PostsController extends Controller {
 
     if (count($errors) === 0) {
       $user = $this->session->get('user');
-      $this->db_manager->get('Posts')->insert($user['id'], $contents, $performance['id']);
+      $this->db_manager->get('Posts')->insert($user['id'], $contents, $performance);
       return $this->redirect('/users/' . $user['id']);
     }
 
