@@ -4,5 +4,9 @@
 # fomantic UI
 /resource/semantic/
 
+# images
+web/user_images/*
+web/performance_images/*
+
 # SQL
 mystery_logger.sql
