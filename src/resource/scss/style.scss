@@ -1,0 +1,129 @@
+@charset "UTF-8";
+@import "variables";
+@import url(./home.css);
+@import url(./performances.css);
+@import url(./posts.css);
+@import url(./users.css);
+
+/* GLOBAL */
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  li {
+    list-style-type: none;
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: $header_height;
+  padding-bottom: $footer_height;
+  position: relative;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100%;
+}
+
+/* layout.php */
+
+header {
+  width: 100%;
+  height: $header_height;
+  display: flex;
+  background-color: dimgray;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+
+  p {
+    margin-left: 16px;
+
+    a {
+      color: whitesmoke;
+      font-size: 24px;
+      line-height: $header_height;
+      display: inline-block;
+
+      &:hover {
+        color: yellow;
+        text-decoration: none;
+      }
+    }
+  }
+
+  nav {
+    margin-left: auto;
+    
+    ul {
+      display: flex;
+
+      li {
+        margin-right: 16px;
+        
+        a{
+          color: whitesmoke;
+          font-size: 16px;
+          line-height: $header_height;
+          display: inline-block;
+
+          &:hover {
+            color: yellow;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  height: $footer_height;
+  background-color: dimgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+
+  p {
+    color: whitesmoke;
+    font-size: 12px;
+  }
+
+  a {
+    color: whitesmoke;
+    font-size: 12px;
+    &:hover {
+      color: yellow;
+      text-decoration: none;
+    }
+  }
+}
+
+
+/* errors.php */
+.error_list {
+  color: red;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}

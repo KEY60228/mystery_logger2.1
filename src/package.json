@@ -1,0 +1,15 @@
+{
+  "name": "mystery_logger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "fomantic-ui": "^2.8.6",
+    "jquery": "^3.5.1"
+  }
+}
