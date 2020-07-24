@@ -11,3 +11,6 @@ web/performance_images/*
 # SQL
 mystery_logger.sql
 performances.sql
+
+# Composer
+vendor/
