@@ -1,0 +1,9 @@
+{
+    "name": "root/mystery_logger",
+    "require": {},
+    "autoload": {
+      "psr-4": {
+        "app\\": "."
+      }
+    }
+}
