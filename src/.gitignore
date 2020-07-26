@@ -1,8 +1,8 @@
 # node_modules
-/node_modules
+node_modules/
 
 # fomantic UI
-/resource/semantic/
+resource/semantic/
 
 # images
 web/user_images/*
